@@ -12,12 +12,10 @@ attrs==22.1.0
     # via
     #   outcome
     #   trio
-certifi==2022.6.15
+certifi==2022.12.7
     # via urllib3
 cffi==1.15.1
-    # via
-    #   cryptography
-    #   trio
+    # via cryptography
 cryptography==37.0.4
     # via
     #   pyopenssl
@@ -37,7 +35,7 @@ pyopenssl==22.0.0
 pysocks==1.7.1
     # via urllib3
 selenium==4.3.0
-    # via -r app/requirements.in
+    # via -r requirements.in
 sniffio==1.2.0
     # via trio
 sortedcontainers==2.4.0
