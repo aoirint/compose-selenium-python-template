@@ -10,7 +10,7 @@ services:
     depends_on:
       - selenium
   selenium:
-    image: selenium/standalone-chrome:103.0
+    image: selenium/standalone-chrome:117.0
     environment:
       - "SE_SCREEN_WIDTH=1920"
       - "SE_SCREEN_HEIGHT=1080"
