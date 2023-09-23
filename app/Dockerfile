@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:1.5
 FROM python:3.11
 
 ARG DEBIAN_FRONTEND=noninteractive
