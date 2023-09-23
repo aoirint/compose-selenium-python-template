@@ -42,4 +42,4 @@ RUN <<EOF
     chown -R user:user /work
 EOF
 
-ADD ./code /code
+ADD ./scripts /code
