@@ -12,6 +12,7 @@ services:
 
   selenium:
     image: selenium/standalone-chrome:117.0
+    restart: always
     environment:
       - "SE_SCREEN_WIDTH=1920"
       - "SE_SCREEN_HEIGHT=1080"
