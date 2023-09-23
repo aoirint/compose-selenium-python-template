@@ -7,6 +7,13 @@ Docker Compose + Python + Seleniumの環境構築テンプレート。
 - Python 3.11
 - Poetry 1.6
 
+## コードフォーマット
+
+```shell
+poetry run pysen run lint
+poetry run pysen run format
+```
+
 ## Pythonライブラリの管理
 
 Pythonライブラリの管理に[Poetry](https://python-poetry.org/docs/#installation)を使っています。
