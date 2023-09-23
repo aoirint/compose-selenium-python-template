@@ -6,19 +6,37 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /work
 
-RUN apt-get update && \
+RUN <<EOF
+    set -eu
+
+    apt-get update
+
     apt-get install -y \
         gosu \
-        wait-for-it && \
-    apt-get clean && \
+        wait-for-it
+
+    apt-get clean
     rm -rf /var/lib/apt/lists/*
+EOF
 
-RUN useradd -o -u 1000 -U -m user
+RUN <<EOF
+    set -eu
 
-RUN mkdir -p /work && \
+    useradd -o -u 1000 -U -m user
+EOF
+
+RUN <<EOF
+    set -eu
+
+    mkdir -p /work
     chown -R user:user /work
+EOF
 
 ADD ./requirements.txt /tmp/
-RUN gosu user pip3 install -r /tmp/requirements.txt
+RUN <<EOF
+    set -eu
+
+    gosu user pip3 install -r /tmp/requirements.txt
+EOF
 
 ADD ./code /code
