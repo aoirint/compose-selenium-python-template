@@ -2,7 +2,9 @@
 
 Docker Compose + Python + Seleniumの環境構築テンプレート。
 
-## 依存管理
+## Pythonライブラリの管理
+
+Pythonライブラリの管理に[Poetry](https://python-poetry.org/docs/#installation)を使っています。
 
 ```shell
 poetry export --without-hashes -o requirements.txt
