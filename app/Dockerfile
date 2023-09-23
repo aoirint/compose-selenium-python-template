@@ -4,8 +4,6 @@ FROM python:3.11
 ARG DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1
 
-WORKDIR /work
-
 RUN <<EOF
     set -eu
 
@@ -25,18 +23,20 @@ RUN <<EOF
     useradd -o -u 1000 -U -m user
 EOF
 
-RUN <<EOF
-    set -eu
-
-    mkdir -p /work
-    chown -R user:user /work
-EOF
-
 ADD ./requirements.txt /tmp/
 RUN <<EOF
     set -eu
 
     gosu user pip3 install -r /tmp/requirements.txt
+EOF
+
+WORKDIR /work
+
+RUN <<EOF
+    set -eu
+
+    mkdir -p /work
+    chown -R user:user /work
 EOF
 
 ADD ./code /code
