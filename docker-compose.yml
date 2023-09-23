@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   app:
-    build: ./app
+    build: .
     command: [ "wait-for-it", "selenium:4444", "--", "gosu", "user", "python3", "/code/main.py" ]
     volumes:
       - ./work:/work
@@ -9,6 +9,7 @@ services:
       - "SELENIUM_URL=http://selenium:4444/wd/hub"
     depends_on:
       - selenium
+
   selenium:
     image: selenium/standalone-chrome:117.0
     environment:
