@@ -4,6 +4,7 @@ FROM python:3.11
 ARG DEBIAN_FRONTEND=noninteractive
 ARG PIP_NO_CACHE_DIR=1
 ENV PYTHONUNBUFFERED=1
+ENV PATH=/home/user/.local/bin:${PATH}
 
 RUN <<EOF
     set -eu
