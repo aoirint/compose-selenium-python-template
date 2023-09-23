@@ -20,7 +20,8 @@ EOF
 RUN <<EOF
     set -eu
 
-    useradd -o -u 1000 -U -m user
+    groupadd -o -g 1000 user
+    useradd -m -o -u 1000 -g user user
 EOF
 
 ADD ./requirements.txt /tmp/
