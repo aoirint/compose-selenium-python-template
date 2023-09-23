@@ -18,7 +18,7 @@ mkdir work
 sudo chown -R 1000:1000 work
 ```
 
-必要なDockerイメージを取得し、Dockerイメージをビルドします。
+必要なDockerイメージを取得し、アプリケーションのDockerイメージをビルドします。
 
 ```shell
 sudo docker compose pull
