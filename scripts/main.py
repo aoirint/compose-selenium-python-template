@@ -7,7 +7,7 @@ selenium_url = os.environ["SELENIUM_URL"]
 website_url = "https://example.com"
 
 options = webdriver.ChromeOptions()
-options.add_argument("--kiosk")
+options.add_argument("--kiosk")  # type: ignore[no-untyped-call]
 
 driver = webdriver.Remote(
     command_executor=selenium_url,
