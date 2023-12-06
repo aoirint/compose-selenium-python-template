@@ -33,13 +33,5 @@ RUN <<EOF
     gosu user pip3 install -r /tmp/requirements.txt
 EOF
 
-WORKDIR /work
-
-RUN <<EOF
-    set -eu
-
-    mkdir -p /work
-    chown -R user:user /work
-EOF
-
-ADD ./scripts /code
+WORKDIR /code
+ADD ./compose_selenium_python_template /code/compose_selenium_python_template
