@@ -4,7 +4,7 @@ services:
     build: .
     command: [ "wait-for-it", "selenium:4444", "--", "gosu", "user", "python", "-m", "compose_selenium_python_template" ]
     volumes:
-      - ./work:/work
+      - ./work:/code/work
     environment:
       - "SELENIUM_URL=http://selenium:4444/wd/hub"
     depends_on:
