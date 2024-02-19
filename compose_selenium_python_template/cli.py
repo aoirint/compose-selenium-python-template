@@ -18,7 +18,7 @@ def main() -> None:
     parser.add_argument(
         "--output_file",
         type=Path,
-        default="work/screenshot.png",
+        default="screenshot.png",
     )
     parser.add_argument(
         "--selenium_url",
