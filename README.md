@@ -7,7 +7,7 @@ Docker Compose + Python + Seleniumの環境構築テンプレート。
 - Docker Engine 24
 - Docker Compose V2
 - Python 3.11
-- Poetry 1.6
+- Poetry 1.7
 
 ## 実行手順
 
